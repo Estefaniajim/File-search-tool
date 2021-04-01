@@ -19,7 +19,7 @@ def searchFile(word, path):
     files = []
     for i in os.listdir(path):
         if os.path.isfile(os.path.join(path, i)) and word in i:
-            newPath = path + "/" + i
+            newPath = path + str("/" + i)
             files.append(newPath)
     return files if len(files) != 0 else False
 
@@ -29,3 +29,19 @@ def getFilesNames(path):
         filesNames.extend(filenames)
         break
     return filesNames
+
+def getWordsInFiles(path):
+    words = []
+    files = os.listdir(path)
+    for file in files:
+        if re.isTextFile(file):
+            with open(os.path.join(path, file), 'r') as f:
+                content = f.read().split(" ")
+                for i in content:
+                    if i != "":
+                        words.append(i)
+    return words
+
+#print(getRE("ab*", path))
+#print(getWordsInFiles(path))
+#print(re.isTextFile("hola.txt"))

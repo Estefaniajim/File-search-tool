@@ -46,3 +46,12 @@ def isOnTheWord(pattern, word):
         return True
     else:
         return False
+
+def isTextFile(fileName):
+    lenght = len(fileName)
+    if fileName[lenght-1] == "t":
+        if fileName[lenght-2] == "x":
+            if fileName[lenght-3] == "t":
+                if fileName[lenght-4] == ".":
+                    return True
+    return False
