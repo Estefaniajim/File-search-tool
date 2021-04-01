@@ -38,6 +38,7 @@ def validateRE(rule, word):
         else:
             return False
 
+
 def isOnTheWord(pattern, word):
     newPattern = ""
     for letter in pattern:
@@ -49,9 +50,9 @@ def isOnTheWord(pattern, word):
 
 def isTextFile(fileName):
     lenght = len(fileName)
-    if fileName[lenght-1] == "t":
-        if fileName[lenght-2] == "x":
-            if fileName[lenght-3] == "t":
-                if fileName[lenght-4] == ".":
+    if fileName[lenght - 1] == "t":
+        if fileName[lenght - 2] == "x":
+            if fileName[lenght - 3] == "t":
+                if fileName[lenght - 4] == ".":
                     return True
     return False

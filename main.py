@@ -6,6 +6,10 @@ path = 'C:/Users\estef\Documents\prueba'
 def getRE(rule, dir):
     files = getFilesNames(dir)
     finalPaths = []
+    if "+" in rule:
+        words = getWordsInFiles(dir)
+        for word in words:
+            files.append(word)
     for file in files:
         if re.validateRE(rule, file):
             newPath = searchFile(file, dir)
