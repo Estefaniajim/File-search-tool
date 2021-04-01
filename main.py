@@ -1,4 +1,3 @@
-import re
 import os
 
 path = 'C:/Users\estef\Documents\prueba'
