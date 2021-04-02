@@ -1,8 +1,7 @@
 import os
 import RegularExpression as re
 
-path = 'C:/Users\estef\Documents\prueba'
-
+#path = 'C:/Users\estef\Documents\prueba'
 
 def getRE(rule, dir):
     files = getFilesNames(dir)
