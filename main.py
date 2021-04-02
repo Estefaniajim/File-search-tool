@@ -3,6 +3,7 @@ import RegularExpression as re
 
 path = 'C:/Users\estef\Documents\prueba'
 
+
 def getRE(rule, dir):
     files = getFilesNames(dir)
     finalPaths = []
@@ -17,7 +18,10 @@ def getRE(rule, dir):
                 for path in newPath:
                     if path not in finalPaths:
                         finalPaths.append(path)
+            else:
+                finalPaths.append(file + "from text file")
     return finalPaths
+
 
 def searchFile(word, path):
     files = []
@@ -27,12 +31,14 @@ def searchFile(word, path):
             files.append(newPath)
     return files if len(files) != 0 else False
 
+
 def getFilesNames(path):
     filesNames = []
     for (dirpath, dirnames, filenames) in os.walk(path):
         filesNames.extend(filenames)
         break
     return filesNames
+
 
 def getWordsInFiles(path):
     words = []
@@ -46,6 +52,6 @@ def getWordsInFiles(path):
                         words.append(i)
     return words
 
-#print(getRE("ab*", path))
-#print(getWordsInFiles(path))
-#print(re.isTextFile("hola.txt"))
+# print(getRE("ab*", path))
+# print(getWordsInFiles(path))
+# print(re.isTextFile("hola.txt"))
