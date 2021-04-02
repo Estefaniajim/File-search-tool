@@ -1,7 +1,6 @@
 import os
 import RegularExpression as re
 
-#path = 'C:/Users\estef\Documents\prueba'
 
 def getRE(rule, dir):
     files = getFilesNames(dir)
@@ -50,7 +49,3 @@ def getWordsInFiles(path):
                     if i != "":
                         words.append(i)
     return words
-
-# print(getRE("ab*", path))
-# print(getWordsInFiles(path))
-# print(re.isTextFile("hola.txt"))

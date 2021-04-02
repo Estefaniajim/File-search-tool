@@ -5,7 +5,7 @@ layout = [[sg.Text("Path: ")],
           [sg.Input(key='-INPUT-PATH-')],
           [sg.Text("Regular Expression: ")],
           [sg.Input(key='-INPUT-RE-')],
-          [sg.Listbox(values=[], size=(40,1), key="-FILE LIST-")],
+          [sg.Listbox(values=[], size=(40, 1), key="-FILE LIST-")],
           [sg.Button('Ok'), sg.Button('Quit')]]
 window = sg.Window('File Searcher by Estefania Jimenez-A01635062', layout)
 while True:
