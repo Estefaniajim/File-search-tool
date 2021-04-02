@@ -29,7 +29,6 @@ def validateRE(rule, word):
         for i in range(len(patron)):
             if word[i] != patron[i]:
                 currentState = False
-
     if currentState:
         return True
     else:
@@ -47,6 +46,7 @@ def isOnTheWord(pattern, word):
         return True
     else:
         return False
+
 
 def isTextFile(fileName):
     lenght = len(fileName)
