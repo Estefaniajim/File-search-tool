@@ -3,6 +3,10 @@ import RegularExpression as re
 
 
 def getRE(rule, dir):
+    if rule == "":
+        return ["RE no valida"]
+    if dir == "":
+        return ["PATH no valido"]
     files = getFilesNames(dir)
     finalPaths = []
     if "+" in rule:
@@ -17,7 +21,7 @@ def getRE(rule, dir):
                     if path not in finalPaths:
                         finalPaths.append(path)
             else:
-                finalPaths.append(file + "from text file")
+                finalPaths.append(file + " from text file")
     return finalPaths
 
 
